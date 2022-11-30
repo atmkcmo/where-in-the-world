@@ -2,8 +2,6 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-
-
 // (Light Mode Text)
 $very-dark-blue: hsl(200, 15%, 8%);
 
@@ -28,13 +26,9 @@ $theme-colors: (
 );
 $input-group-addon-bg: $white;
 .dark {
-    /* redefine theme colors for dark theme */
-
-
     $theme-colors: (
         "light":  $dark-blue,
     );
-    
     $body-color: $very-light-gray;
     $body-bg: $very-dark-blue;
     $card-bg: $dark-blue;
@@ -42,10 +36,8 @@ $input-group-addon-bg: $white;
     $form-select-bg:$input-bg;
     $form-select-color: $white;
     $input-group-addon-bg: $input-bg;
-
     $input-border-color: $very-dark-blue;
     $form-select-border-color: $very-dark-blue;
-   
     .nav {
         background: $dark-blue;
     }
