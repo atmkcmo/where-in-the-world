@@ -1,0 +1,75 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+
+
+// (Light Mode Text)
+$very-dark-blue: hsl(200, 15%, 8%);
+
+//  (Light Mode Input)
+$dark-gray: hsl(0, 0%, 52%);
+
+//  (Light Mode Background)
+$very-light-gray: hsl(0, 0%, 98%);
+
+// (Dark Mode Elements)
+$dark-blue: hsl(209, 23%, 22%);
+
+// (Dark Mode Background)
+$very-dark-blue: hsl(207, 26%, 17%);
+
+//  (Dark Mode Text & Light Mode Elements)
+$white: hsl(0, 0%, 100%);
+
+
+$theme-colors: (
+    "light": $white,
+);
+$input-group-addon-bg: $white;
+.dark {
+    /* redefine theme colors for dark theme */
+
+
+    $theme-colors: (
+        "light":  $dark-blue,
+    );
+    
+    $body-color: $very-light-gray;
+    $body-bg: $very-dark-blue;
+    $card-bg: $dark-blue;
+    $input-bg: $dark-blue;
+    $form-select-bg:$input-bg;
+    $form-select-color: $white;
+    $input-group-addon-bg: $input-bg;
+
+    $input-border-color: $very-dark-blue;
+    $form-select-border-color: $very-dark-blue;
+   
+    .nav {
+        background: $dark-blue;
+    }
+    --#{$variable-prefix}body-color: #{$body-color};
+    --#{$variable-prefix}body-bg: #{$body-bg};
+    @import "~bootstrap/scss/bootstrap";
+}
+@import "~bootstrap/scss/bootstrap";
+.nav {
+    background: $white
+}
+.body {
+    background: $very-light-gray;
+}
+.country-card {
+    transition: 0.2s ease-in-out;
+    position: relative;
+    top: 0;
+    width: 100%;
+    &__flag {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+    &:hover {
+        top: -5px;
+    }
+}
