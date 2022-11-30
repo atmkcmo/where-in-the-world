@@ -5,6 +5,9 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/where-in-the-world/'
+    : '/',
   plugins: [vue()],
   resolve: {
     alias: {
@@ -15,5 +18,5 @@ export default defineConfig({
   build: {
     outDir: 'docs',
   },
-  base: '/where-in-the-world/'
+  base: '/where-in-the-world/',
 })

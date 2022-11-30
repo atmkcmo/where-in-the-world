@@ -34,7 +34,7 @@ export default {
     methods: {
         gotoDetailsPage(place) {
             place = place.split(' ').join('-');
-            this.$router.push(`/${place.toLowerCase()}`);
+            this.$router.push(`/where-in-the-world/${place.toLowerCase()}`);
         }
     }
 };
