@@ -1,5 +1,6 @@
 <template>
-    <nav class="nav element shadow-sm">
+    <div>
+        <nav class="nav element shadow-sm">
         <div class="container-lg">
             <div class="row">
                 <div class="col">
@@ -47,6 +48,8 @@
     <main class="main py-5">
         <div class="container-lg"><router-view></router-view></div>
     </main>
+    </div>
+   
 </template>
 
 <script>

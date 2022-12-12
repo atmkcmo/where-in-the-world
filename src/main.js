@@ -25,9 +25,5 @@ const router = createRouter({
 	],
 });
 
-// import "bootstrap/scss/bootstrap.scss";
-
 import './assets/scss/styles.scss';
-// import "bootstrap";
-
 createApp(App).use(router).mount('#app');

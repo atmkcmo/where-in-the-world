@@ -15,28 +15,18 @@
                             <div class="flex-grow-1">
                                 <ul class="list-unstyled">
                                     <li class="mb-2">
-                                        <span class="fw-bold"
-                                            >Native Name:
-                                        </span>
-                                        {{
-                                            Object.values(
-                                                country.name.nativeName
-                                            )[0].common
-                                        }}
+                                        <span class="fw-bold" >Native Name: </span>
+                                        {{ Object.values( country.name.nativeName )[0].common  }}
                                     </li>
                                     <li class="mb-2">
-                                        <span class="fw-bold"
-                                            >Populatoin:
-                                        </span>
+                                        <span class="fw-bold">Populatoin: </span>
                                         {{ country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}
                                     </li>
                                     <li class="mb-2">
-                                        <span class="fw-bold">Region: </span
-                                        >{{ country.region }}
+                                        <span class="fw-bold">Region: </span>{{ country.region }}
                                     </li>
                                     <li class="mb-2">
-                                        <span class="fw-bold">Sub Region: </span
-                                        >{{ country.subregion }}
+                                        <span class="fw-bold">Sub Region: </span>{{ country.subregion }}
                                     </li>
                                     <li class="mb-2">
                                         <span class="fw-bold">Capital: </span>
@@ -47,33 +37,18 @@
                             <div class="flex-grow-1">
                                 <ul class="list-unstyled">
                                     <li class="mb-2">
-                                        <span class="fw-bold"
-                                            >Top lev Domain: </span
-                                        >{{ country.tld[0] }}
+                                        <span class="fw-bold">Top lev Domain: </span>
+                                        {{ country.tld[0] }}
                                     </li>
                                     <li class="mb-2">
-                                        <span class="fw-bold">Currencies: </span
-                                        >{{
-                                            Object.values(country.currencies)[0]
-                                                .name
-                                        }}
+                                        <span class="fw-bold">Currencies: </span>
+                                        {{ Object.values(country.currencies)[0].name }}
                                     </li>
                                     <li class="mb-2">
                                         <span class="fw-bold">Languages: </span>
-                                        <span
-                                            v-for="(
-                                                lang, a, index
-                                            ) in country.languages"
-                                            :key="lang.id">
-                                            {{ lang
-                                            }}<span
-                                                v-if="
-                                                    index + 1 <
-                                                    Object.keys(
-                                                        country.languages
-                                                    ).length
-                                                "
-                                                >,
+                                        <span v-for="( lang, a, index ) in country.languages" :key="lang.id">
+                                            {{ lang }}
+                                            <span v-if="index + 1 < object.keys(country.languages).length">,
                                             </span>
                                         </span>
                                     </li>
@@ -93,8 +68,7 @@
                                     class="btn m-1 btn-light shadow-sm"
                                     v-for="country in borders"
                                     :key="country.id"
-                                    :to="{
-                                        name: 'details',
+                                    :to="{ name: 'details',
                                         params: {
                                             country: `${country.toLowerCase().split(' ').join('-')}`,
                                         },
